@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import MyForm from './MyForm';
 import MyFormik from './MyFormik';
 import Profile from './Profile';
@@ -20,6 +20,7 @@ function App() {
       <header className="App-header">
         <div className="App-logo">
           <Profile />
+
           <p className="App-text">React demo app</p>
         </div>
         <Menu />

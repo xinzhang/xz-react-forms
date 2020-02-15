@@ -1,4 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const BaseButton = styled.button`
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px 16px;
+  font-size: 14px;
+`;
+
+const Button = styled(BaseButton)`
+  background-color: ${(props) => props.theme.backgroundPrimary};
+
+  :hover,
+  :focus {
+    background-color: ${(props) => props.theme.primary};
+    color: ${(props) => props.theme.backgroundPrimary};
+  }
+`;
 
 class ValidationForm extends React.Component {
   constructor(props) {
@@ -83,7 +101,7 @@ class ValidationForm extends React.Component {
             <span className="error">{this.state.email_error}</span>
           )}
           <br />
-          <button onClick={this.submit}>Submit</button>
+          <Button onClick={this.submit}>Submit</Button>
         </form>
       </div>
     );
