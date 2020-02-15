@@ -27,8 +27,8 @@ function App() {
           </div>
         </header>
         <div>
-          <Route path="/" exact component={() => <MyForm onSubmit={submit} />} />
-          <Route path="/form" component={() => <MyForm onSubmit={submit} />} />
+          <Route path="/" exact render={() => <MyForm onSubmit={submit} />} />
+          <Route path="/form" render={() => <MyForm onSubmit={submit} />} />
           <Route path="/formik" component={MyFormik} />
         </div>
         <hr />
