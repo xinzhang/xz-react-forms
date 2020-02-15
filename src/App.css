@@ -46,7 +46,20 @@ input {
   margin: 8px;
 }
 
+button {
+  margin-left: 8px;
+}
+
 .feedback {
   color: #282c34;
+  text-align: left;
+}
+
+.error {
+  color: #993333;
+  font-size: 10px;
+}
+
+.validation-form {
   text-align: left;
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MyForm from './MyForm';
 import MyFormik from './MyFormik';
+import ValidationForm from './ValidationForm';
 import './App.css';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
             <a className="App-link" href="/form">
               Form
             </a>
+            <a className="App-link" href="/validationform">
+              ValidateForm
+            </a>
             <a className="App-link" href="/formik">
               Formik
             </a>
@@ -29,6 +33,10 @@ function App() {
         <div>
           <Route path="/" exact render={() => <MyForm onSubmit={submit} />} />
           <Route path="/form" render={() => <MyForm onSubmit={submit} />} />
+          <Route
+            path="/validationform"
+            render={() => <ValidationForm onSubmit={submit} />}
+          />
           <Route path="/formik" component={MyFormik} />
         </div>
         <hr />
