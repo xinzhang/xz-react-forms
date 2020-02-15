@@ -31,9 +31,9 @@ class ValidationForm extends React.Component {
       email_error = 'please enter valid email address';
     }
 
-    if (name_error || email_error) {      
+    if (name_error || email_error) {
       this.setState({ name_error, email_error });
-      retur false;
+      return false;
     }
 
     return true;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MyForm from './MyForm';
 import MyFormik from './MyFormik';
+import Profile from './Profile';
 import ValidationForm from './ValidationForm';
 import './App.css';
 
@@ -17,7 +18,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <div>React demo app</div>
+          <div className="App-logo">
+            <Profile />
+            <p className="App-text">React demo app</p>
+          </div>
           <div className="menu">
             <a className="App-link" href="/form">
               Form
