@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import MyForm from './MyForm';
+import MyFormik from './MyFormik';
 import './App.css';
 
 function App() {
@@ -11,26 +13,30 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>React demo app</div>
-        <div className="menu">
-          <a className="App-link" href="/form">
-            Form
-          </a>
-          <a className="App-link" href="/formik">
-            Formik
-          </a>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <div>React demo app</div>
+          <div className="menu">
+            <a className="App-link" href="/form">
+              Form
+            </a>
+            <a className="App-link" href="/formik">
+              Formik
+            </a>
+          </div>
+        </header>
+        <div>
+          <Route path="/" exact component={() => <MyForm onSubmit={submit} />} />
+          <Route path="/form" component={() => <MyForm onSubmit={submit} />} />
+          <Route path="/formik" component={MyFormik} />
         </div>
-      </header>
-      <div>
-        <MyForm onSubmit={submit} />
+        <hr />
+        <p className="feedback">
+          {formValues && <span>Result: {JSON.stringify(formValues, null, 2)}</span>}
+        </p>
       </div>
-      <hr />
-      <p className="feedback">
-        {formValues && <span>Result: {JSON.stringify(formValues)}</span>}
-      </p>
-    </div>
+    </BrowserRouter>
   );
 }
 
