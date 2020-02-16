@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Profile() {
+export default function Profile({ showHide }) {
   const [user, setUser] = useState();
 
   useEffect(() => {
-    fetch('https://api.randomuser.me')
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result.results[0]);
-        setUser(result.results[0]);
-        //ser.picture.thumbnail;
-      });
-  }, []);
+    const fetchData = () => {
+      fetch('https://api.randomuser.me')
+        .then((res) => res.json())
+        .then((result) => {
+          setUser(result.results[0]);
+        });
+    };
+    fetchData();
+  }, [showHide]);
 
-  return <>{user && <img className="profile" src={user.picture.thumbnail} />}</>;
+  return (
+    <>
+      {showHide && user && (
+        <img alt="{user.id.name}" className="profile" src={user.picture.thumbnail} />
+      )}
+    </>
+  );
 }

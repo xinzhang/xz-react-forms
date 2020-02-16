@@ -19,8 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="App-logo">
-          <Profile />
-
+          <Profile showHide />
           <p className="App-text">React demo app</p>
         </div>
         <Menu />
