@@ -8,10 +8,9 @@ function DropdownMenu({ expanded, menuText, children }) {
   };
 
   return (
-    <div>
-      <div className="menu" onClick={switchVisible}>
-        {menuText}
-      </div>
+    <div className="menu" onClick={switchVisible}>
+      {menuText}
+
       {itemsVisible === true && (
         <ul className="menu-items">
           {children.map((item, index) => (

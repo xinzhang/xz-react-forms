@@ -3,7 +3,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import MyForm from './MyForm';
 import MyFormik from './MyFormik';
 import Profile from './Profile';
-import Menu from './Menu';
+import FormsMenu from './FormsMenu';
+import ListMenu from './ListMenu';
 import ValidationForm from './ValidationForm';
 import './App.css';
 
@@ -22,7 +23,10 @@ function App() {
           <Profile showHide />
           <p className="App-text">React demo app</p>
         </div>
-        <Menu />
+        <div>
+          <ListMenu />
+          <FormsMenu />
+        </div>
       </header>
       <div>
         <BrowserRouter>

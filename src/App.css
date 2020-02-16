@@ -53,6 +53,7 @@ body {
   color: #61dafb;
   margin-left: 16px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .menu:hover {
@@ -64,9 +65,9 @@ body {
   z-index: 10;
   position: absolute;
   text-align: left;
-  width: 100px;
-  margin-top: 0px;
-  margin-left: -60px;
+  width: 80px;
+  margin-top: 10px;
+  margin-left: -80px;
 }
 
 li.menu-item {
