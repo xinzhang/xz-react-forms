@@ -6,7 +6,7 @@ import Profile from './components/Profile';
 import FormsMenu from './components/FormsMenu';
 import ListMenu from './components/ListMenu';
 import ValidationForm from './components/ValidationForm';
-import './styles/App.css';
+import './styles/App.scss';
 
 function App() {
   const [formValues, setFormValues] = useState();
@@ -17,18 +17,45 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="App-logo">
+    <div>
+      {/* <nav className="navbar">
+        <div className="navbar-brand">
           <Profile showHide />
-          <p className="App-text">React demo app</p>
         </div>
-        <div>
-          <ListMenu />
-          <FormsMenu />
+        <div className="navbar-item">
+          <p className="subtitle">React demo app</p>
         </div>
-      </header>
-      <div>
+        <div id="navbarBasicExample" className="navbar-menu">
+          <div className="navbar-right">
+            <ListMenu />
+            
+          </div>
+        </div>
+      </nav>
+      */}
+      <nav className="navbar">
+        <div className="container">
+          <div className="navbar-brand">
+            <a className="navbar-item" href="/">
+              <Profile showHide />
+            </a>
+            <div className="navbar-item">
+              <p className="subtitle">React demo app</p>
+            </div>
+            <span className="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" className="navbar-menu">
+            <div className="navbar-end">
+              <FormsMenu menuText="Forms" />
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div className="has-text-centered">
         <BrowserRouter>
           <Route path="/" exact render={() => <MyForm onSubmit={submit} />} />
           <Route path="/form" render={() => <MyForm onSubmit={submit} />} />

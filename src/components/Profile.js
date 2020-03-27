@@ -17,7 +17,9 @@ export default function Profile({ showHide }) {
   return (
     <>
       {showHide && user && (
-        <img alt="{user.id.name}" className="profile" src={user.picture.thumbnail} />
+        <figure className="image">
+          <img alt="{user.id.name}" className="profile" src={user.picture.thumbnail} />
+        </figure>
       )}
     </>
   );

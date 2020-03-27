@@ -4,7 +4,7 @@ import DropdownMenu from './DropdownMenu';
 function ListMenu() {
   const items = [{ path: '/list', text: 'Show List' }];
   return (
-    <DropdownMenu menuText="List" expanded="false">
+    <DropdownMenu menuText="List" expanded="false" >
       {items}
     </DropdownMenu>
   );
