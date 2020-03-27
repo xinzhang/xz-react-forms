@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import MyForm from './MyForm';
-import MyFormik from './MyFormik';
-import Profile from './Profile';
-import FormsMenu from './FormsMenu';
-import ListMenu from './ListMenu';
-import ValidationForm from './ValidationForm';
-import './App.css';
+import MyForm from './components/MyForm';
+import MyFormik from './components/MyFormik';
+import Profile from './components/Profile';
+import FormsMenu from './components/FormsMenu';
+import ListMenu from './components/ListMenu';
+import ValidationForm from './components/ValidationForm';
+import './styles/App.css';
 
 function App() {
   const [formValues, setFormValues] = useState();
