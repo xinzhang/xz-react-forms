@@ -6,6 +6,7 @@ import Profile from './components/Profile';
 import FormsMenu from './components/FormsMenu';
 import ListMenu from './components/ListMenu';
 import ValidationForm from './components/ValidationForm';
+import DndExample from './components/DndExample';
 import './styles/App.scss';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
           </div>
           <div id="navbarMenu" className="navbar-menu">
             <div className="navbar-end">
+              <a class="navbar-item" href="/dnd">dnd</a>
               <FormsMenu menuText="Forms" />
             </div>
           </div>
@@ -59,6 +61,7 @@ function App() {
         <BrowserRouter>
           <Route path="/" exact render={() => <MyForm onSubmit={submit} />} />
           <Route path="/form" render={() => <MyForm onSubmit={submit} />} />
+          <Route path="/dnd" render={() => <DndExample />} />
           <Route
             path="/validationform"
             render={() => <ValidationForm onSubmit={submit} />}
